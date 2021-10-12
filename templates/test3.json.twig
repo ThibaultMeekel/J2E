@@ -1,0 +1,12 @@
+{
+    "liste" : [
+        {% for etudiant in liste %}
+        {
+            "nom" : "{{ etudiant.nom }}",
+            "id" : "{{ etudiant.id }}"
+        }
+        {% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+
